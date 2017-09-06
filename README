@@ -2,8 +2,8 @@ This Matlab plugin is an interface for the Marzhauser Tango Desktop. This is a s
 Libraries and documentations are not included by this project. Users may download them on Marzhauser's website.
 This plugin works only on Windows since Marzhauser library is only provided for that plateform.
 
-USES:
------
+HOW TO USE:
+-----------
 
 You have to compie the c-code using MatLab MEX compiler.
 
