@@ -5,7 +5,7 @@ This plugin works only on Windows since Marzhauser library is only provided for 
 HOW TO USE:
 -----------
 
-You have to compie the c-code using MatLab MEX compiler.
+You have to compile the c-code using MatLab MEX compiler.
 
 Example: 
 mex TangoMex.cpp -lTango_DLL -L.
