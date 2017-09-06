@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <string.h>
 
-
 void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 {
     // Get the command string
