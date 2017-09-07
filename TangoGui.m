@@ -3,7 +3,7 @@
 function TangoGui(tango)
 
     if nargin == 1
-        if ~isa(tang,'Tango')
+        if ~isa(tango,'Tango')
             error('Expected argument 1 to be a valid Tango');
         else
             createobj = false;
@@ -105,17 +105,11 @@ function TangoGui(tango)
 
     
     function gotopos(~,~,pos)
-        
+        tango.setPos(pos);
     end
 
     function increasePos(~,~,dp)
-        
-        tango.displace(dp);
-        try
-            tango.displace(dp);
-        catch e
-            disp(e.message);            
-        end
+       tango.displace(dp);
     end
 end
 

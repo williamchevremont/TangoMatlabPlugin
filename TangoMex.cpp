@@ -71,7 +71,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
     char wrnout[10];
     
     sprintf(wrnout,"ID: %i",ID);
-    mexWarnMsgTxt(wrnout);
+   // mexWarnMsgTxt(wrnout);
 
     // Delete
     if (!strcmp("delete", cmd))
