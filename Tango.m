@@ -61,8 +61,13 @@ classdef Tango < handle
         end
 
         % Get Dimensions
-        function varargout = getDimensions(obj,varargin)
-            [varargout{1:nargout}] = TangoMex('getDimensions',obj.m_TangoID,varargin{:});
+        function [id, txt] = getDimensions(obj,varargin)
+            id = TangoMex('getDimensions',obj.m_TangoID,varargin{:});
+            
+            dimtxt = {'microsteps','um','mm','Degree','Revolutions','cm','m','Inch','mil'};
+            
+            txt = dimtxt(id);
+            
         end
 
         % Get Status

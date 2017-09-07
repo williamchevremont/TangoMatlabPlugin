@@ -85,7 +85,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 
         if(ret = LSX_FreeLSID(ID))
         {
-            char* err;
+            char err[100];
             sprintf(err,"Delete: Error Tango #%i",ret);
             mexErrMsgTxt(err);
         }
@@ -110,7 +110,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 
         if(ret = LSX_MoveAbs(ID,pr[0],pr[1],pr[2],pr[3],true))
         {
-            char* err;
+            char err[100];
             sprintf(err,"setPos: Error Tango #%i",ret);
             mexErrMsgTxt(err);
         }
@@ -190,7 +190,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 
         if(ret = LSX_SetDimensions(ID,pr[0],pr[1],pr[2],pr[3]))
         {
-            char* err;
+            char err[100];
             sprintf(err,"setDimensions: Error Tango #%i",ret);
             mexErrMsgTxt(err);
         }
@@ -205,7 +205,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 
         if(ret = LSX_GetDimensions(ID,&X,&Y,&Z,&A))
         {
-            char* err;
+            char err[100];
             sprintf(err,"getDimensions: Error Tango #%i",ret);
             mexErrMsgTxt(err);
         }
@@ -238,7 +238,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 
         if(ret = LSX_SetVel(ID,pr[0],pr[1],pr[2],pr[3]))
         {
-            char* err;
+            char err[100];
             sprintf(err,"setVel: Error Tango #%i",ret);
             mexErrMsgTxt(err);
         }
@@ -253,7 +253,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 
         if(ret = LSX_GetVel(ID,&X,&Y,&Z,&A))
         {
-            char* err;
+            char err[100];
             sprintf(err,"getVel: Error Tango #%i",ret);
             mexErrMsgTxt(err);
         }
@@ -276,7 +276,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 
         if(ret = LSX_IsVel(ID,&X,&Y,&Z,&A))
         {
-            char* err;
+            char err[100];
             sprintf(err,"getActualVel: Error Tango #%i",ret);
             mexErrMsgTxt(err);
         }
@@ -309,7 +309,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 
         if(ret = LSX_SetAccel(ID,pr[0],pr[1],pr[2],pr[3]))
         {
-            char* err;
+            char err[100];
             sprintf(err,"setAccel: Error Tango #%i",ret);
             mexErrMsgTxt(err);
         }
@@ -324,7 +324,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 
         if(ret = LSX_GetAccel(ID,&X,&Y,&Z,&A))
         {
-            char* err;
+            char err[100];
             sprintf(err,"getAccel: Error Tango #%i",ret);
             mexErrMsgTxt(err);
         }
@@ -348,7 +348,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 
         if(ret = LSX_GetStatus(ID,stat,len))
         {
-            char* err;
+            char err[100];
             sprintf(err,"getStatus: Error Tango #%i",ret);
             mexErrMsgTxt(err);
         }
@@ -363,7 +363,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
     {
         if(ret = LSX_SetJoystickOff(ID))
         {
-            char* err;
+            char err[100];
             sprintf(err,"stopJoystick: Error Tango #%i",ret);
             mexErrMsgTxt(err);
         }
@@ -376,7 +376,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
     {
         if(ret = LSX_SetHandWheelOff(ID))
         {
-            char* err;
+            char err[100];
             sprintf(err,"stopHandWheel: Error Tango #%i",ret);
             mexErrMsgTxt(err);
         }
@@ -390,7 +390,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
     {
         if(ret = LSX_SetJoystickOn(ID,true,true))
         {
-            char* err;
+            char err[100];
             sprintf(err,"startJoystick: Error Tango #%i",ret);
             mexErrMsgTxt(err);
         }
@@ -403,7 +403,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
     {
         if(ret = LSX_SetHandWheelOn(ID,true,true))
         {
-            char* err;
+            char err[100];
             sprintf(err,"startHandWheel: Error Tango #%i",ret);
             mexErrMsgTxt(err);
         }
